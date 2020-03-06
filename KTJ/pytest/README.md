@@ -31,3 +31,5 @@ Tistory_Auto_Pytest.py
 Tistory_Auto_Pytest.py파일 실행시 아래와 같이 진행한다.
 
     : c:/> pytest Tistory_Auto_Pytest.py --html=report.html
+
+![Alt text](pytest_automation.png)
