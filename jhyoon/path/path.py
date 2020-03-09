@@ -15,8 +15,9 @@
 제목_인풋 = '//textarea[@class="textarea_tit"]'
 # placeholder = '제목을 입력하세요'
 # 입력값은 text 문자열로 저장됨
-내용_텍스트박스 = '//body[@class="mce-content-body content"]/p'
-#내용_입력확인 = '{}'.format(내용_텍스트박스) + '/p'
+내용_타이틀 = '//iframe[@title="서식 있는 텍스트 편집기 입니다. ALT-F9를 누르면 메뉴, ALT-F10를 누르면 툴바, ALT-0을 누르면 도움말을 볼 수 있습니다."]'
+내용_텍스트박스 = '//body[@class="mce-content-body content" and @id="tinymce"]'
+내용_입력 = '/p'
 태그 = '//input[@type="text"]'
 완료 = '//button[@type="button" and @class="btn btn-default"]'
 비공개저장 = '//div[@class="wrap_btn"]//button[@class="btn btn-default" and @type="submit"]'

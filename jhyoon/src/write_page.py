@@ -24,11 +24,15 @@ def title_write(드라이버, 내용):
 
 # 내용 텍스트박스 노출
 def body_view(드라이버):
+    iframe = 드라이버.find_element_by_xpath(path.내용_타이틀)
+    드라이버.switch_to.frame(iframe)
     드라이버.find_element_by_xpath(path.내용_텍스트박스)
 
 # 내용 텍스트박스 쓰기
 def body_write(드라이버, 내용):
-    드라이버.find_element_by_xpath(path.내용_텍스트박스).click()
+    iframe = 드라이버.find_element_by_xpath(path.내용_타이틀)
+    드라이버.switch_to.frame(iframe)
+    #드라이버.find_element_by_xpath(path.내용입력).click()
     드라이버.find_element_by_xpath(path.내용_텍스트박스).send_keys('{}'.format(내용))
 
 # 태그 노출
@@ -37,6 +41,6 @@ def tag_view(드라이버):
 
 # 태그 쓰기
 def tag_write(드라이버, 내용):
-    드라이버.find_element_by_xpath(path.태그).clic()
+    #드라이버.find_element_by_xpath(path.태그).click()
     드라이버.find_element_by_xpath(path.태그).send_keys('{}'.format(내용))
     드라이버.find_element_by_xpath(path.태그).send_keys(Keys.ENTER)

@@ -41,10 +41,11 @@ write_page.title_view(드라이버)
 write_page.title_write(드라이버, 내용)
 
 # 내용 입력
-
 내용 = '가나다라마바사'
 write_page.body_write(드라이버, 내용)
-# 프레임 전환 작업 TODO
+
+# 원래의 프레임으로 전환
+드라이버.switch_to.default_content()
 
 # 태그 입력
 내용 = '하나'
@@ -52,6 +53,11 @@ write_page.tag_write(드라이버, 내용)
 
 # 저장
 드라이버.find_element_by_xpath(path.완료).click()
+
+# 비공개저장 클릭
+드라이버.find_element_by_xpath(path.비공개저장).click()
+
+time.sleep(3)
 
 # 종료
 드라이버.quit()
