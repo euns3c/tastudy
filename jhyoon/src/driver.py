@@ -13,7 +13,7 @@ sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 def driver():
 
     options = Options()
-    options.headless = False
+    options.headless = True
     드라이버 = webdriver.Chrome(executable_path="..\chromedriver.exe", options=options)
 
     return 드라이버
